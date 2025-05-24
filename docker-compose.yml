@@ -1,0 +1,14 @@
+services:
+  db:
+    container_name: postgres-ticketing
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: kdeb1
+      POSTGRES_PASSWORD: kdebpwd2
+      PGDATA: /data/postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - db:/data/postgres
+volumes:
+  db:
