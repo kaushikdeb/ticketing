@@ -5,3 +5,15 @@ GET {{baseUrl}}/
 
 ### Get all Software Engineers
 GET {{baseUrl}}/api/v1/software-engineers
+
+### Get Software Engineer by ID
+GET {{baseUrl}}/api/v1/software-engineers/2
+
+### post engineer
+POST {{baseUrl}}/api/v1/software-engineers/add
+Content-Type: application/json
+
+{
+    "name": "Emp 2",
+    "techStack": "javascript, react"
+}

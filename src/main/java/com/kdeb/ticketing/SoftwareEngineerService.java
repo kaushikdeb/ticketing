@@ -7,13 +7,22 @@ import org.springframework.stereotype.Service;
 @Service
 public class SoftwareEngineerService {
  
-    private final SoftwareEngineerReporsitory softwareEngineerReporsitory;
+    private final SoftwareEngineerRepository softwareEngineerReporsitory;
 
-    SoftwareEngineerService(SoftwareEngineerReporsitory sER){
+    SoftwareEngineerService(SoftwareEngineerRepository sER){
         this.softwareEngineerReporsitory = sER;
     }
 
     public List<SoftwareEngineer> getAllSWEngineers(){
         return softwareEngineerReporsitory.findAll();
+    }
+
+    public void addEngineer(SoftwareEngineer softwareEngineer) {
+        softwareEngineerReporsitory.save(softwareEngineer);
+    }
+
+    public SoftwareEngineer getSWEnggById(Integer id) {
+        return softwareEngineerReporsitory.findById(id)
+        .orElseThrow();
     }
 }
