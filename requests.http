@@ -14,6 +14,6 @@ POST {{baseUrl}}/api/v1/software-engineers/add
 Content-Type: application/json
 
 {
-    "name": "Emp 3",
-    "techStack": "java, react"
+    "name": "Emp 2",
+    "techStack": ".net"
 }

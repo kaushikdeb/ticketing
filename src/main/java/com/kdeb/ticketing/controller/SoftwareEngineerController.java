@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kdeb.ticketing.model.SoftwareEngineer;
+import com.kdeb.ticketing.model.SoftwareEngineerDTO;
 import com.kdeb.ticketing.service.SoftwareEngineerService;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,12 +26,12 @@ public class SoftwareEngineerController {
     }
     
     @GetMapping()
-    public List<SoftwareEngineer> getEngineers(){
+    public List<SoftwareEngineerDTO> getEngineers(){
         return softwareEngineerService.getAllSWEngineers();
     }
     
     @GetMapping("{id}")
-    public SoftwareEngineer getEngineerById(@PathVariable Integer id){
+    public SoftwareEngineerDTO getEngineerById(@PathVariable Integer id){
         return softwareEngineerService.getSWEnggById(id);
     }
 
