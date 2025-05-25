@@ -1,4 +1,4 @@
-package com.kdeb.ticketing;
+package com.kdeb.ticketing.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

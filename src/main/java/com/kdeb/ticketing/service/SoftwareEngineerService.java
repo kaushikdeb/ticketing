@@ -1,8 +1,11 @@
-package com.kdeb.ticketing;
+package com.kdeb.ticketing.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+
+import com.kdeb.ticketing.model.SoftwareEngineer;
+import com.kdeb.ticketing.repository.SoftwareEngineerRepository;
 
 @Service
 public class SoftwareEngineerService {
